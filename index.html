@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Database</title>
+</head>
+<body>
+
+  <form id="movieForm">
+
+    <label for="movieTitle">Movie Title:</label>
+    <input type="text" id="movieTitle" name="movieTitle" required>
+
+    <label for="movieRating">Rating (0-5 stars):</label>
+    <input type="number" id="movieRating" name="movieRating" min="0" max="5" step="0.1" required>
+
+    <button type="button" onclick="addMovie()">Add Movie</button>
+
+  </form>
+
+
+  <ul id="movieList"></ul>
+
+
+  <label for="ratingFilter">Filter by Rating:</label>
+  <select id="ratingFilter" onchange="filterMovies()">
+    <option value="all">All Ratings</option>
+    <option value="0">0 stars</option>
+    <option value="1">1 star</option>
+    <option value="2">2 stars</option>
+    <option value="3">3 stars</option>
+    <option value="4">4 stars</option>
+    <option value="5">5 stars</option>
+  </select>
+
+  <ul id="filteredMovieList"></ul>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
